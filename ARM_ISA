@@ -1,0 +1,11 @@
+CMP X, Y       
+BEQ X_equals_Y 
+
+/When X is not equal to Y
+ADD X, X, Y, LSL #1 /Calculation of X = X + 2 * Y, Left-shift is multiplication of 2 and Y
+B end_program 
+
+X_EQUAL_Y:
+ADD X, X, X     /Calculation of X = 2 * X
+
+end_program:
